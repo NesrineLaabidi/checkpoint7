@@ -1,0 +1,24 @@
+ALGORITHM problem1
+VAR
+    Set_1 : ARRAY_OF INTEGER[4];
+    Set_2 : ARRAY_OF INTEGER[5];
+    sum,i,j:INTEGER:=0;
+BEGIN
+        Set_1:={3,1,7,9};
+        Set_2:={2,4,1,9,3};
+        FOR i FROM 0 TO set_1.length-1 STEP 1  DO
+            IF (not set_1[i]in Set_2) THEN
+            sum:=sum+Set_1[i];
+            END_IF
+        END_FOR
+        FOR i FROM 0 TO set_2.length-1 STEP 1  DO
+            IF (not set_2[j]in Set_1) THEN
+            sum:=sum+Set_2[j];
+            END_IF
+        END_FOR
+
+        Write("The sum is:",sum)
+
+
+
+END
